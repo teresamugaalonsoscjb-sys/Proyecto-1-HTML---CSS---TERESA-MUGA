@@ -171,7 +171,19 @@
         <div class="container">
           
           <h2>CONTACTO</h2>
-          <form class="contact-form" action="#" method="post">
+          <form
+            id="contact-form"
+            class="contact-form"
+            action="https://formspree.io/f/teresamugaalonsoscjb@gmail.com"
+            method="POST"
+          >
+          
+          <input
+              type="hidden"
+              name="_replyto"
+              value=""
+            />
+
             <div class="form-group">
               <label for="nombre">Nombre</label>
               <input
@@ -206,6 +218,9 @@
             </div>
 
             <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+          <p 
+          id="form-status" class="form-status" role="status" aria-live="polite">
+          </p>
           </form>
         </div>
       </section>
@@ -214,8 +229,47 @@
     <footer class="site-footer">
       <div class="container footer-inner">
         <p>&copy; 2026 Teresa Muga Alonso. Todos los derechos reservados.</p>
-        
+        <ul class="social-links">
+          <li>
+            <a href="https://github.com/teresamugaalonsoscjb-sys" 
+            target="_blank" 
+            rel="noopener noreferrer">
+              GitHub
+            </a>
+          </li>
+        </ul>
       </div>
     </footer>
+
+<script>
+  const form = document.getElementById("contact-form");
+  const status = document.getElementById("form-status");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    status.textContent = "Enviando...";
+
+    try {
+      const res = await fetch(form.action, {
+        method: form.method,
+        body: new FormData(form),
+        headers: { Accept: "application/json" }
+      });
+
+      if (res.ok) {
+        form.reset();
+        status.textContent = "Mensaje enviado correctamente.";
+        status.style.color = "#38bdf8";
+      } else {
+        status.textContent = "Error al enviar el mensaje.";
+        status.style.color = "#f87171";
+      }
+    } catch {
+      status.textContent = "Error de conexión.";
+      status.style.color = "#f87171";
+    }
+  });
+</script>
+    
   </body>
 </html>

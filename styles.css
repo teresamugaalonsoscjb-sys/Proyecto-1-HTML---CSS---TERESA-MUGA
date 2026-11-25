@@ -262,6 +262,20 @@ a {
   outline-offset: 1px;
 }
 
+.form-status {
+  font-size: 0.95rem;
+  min-height: 1.4rem;
+  font-weight: 500;
+}
+
+.form-status.is-success {
+  color: var(--color-accent);
+}
+
+.form-status.is-error {
+  color: #f87171;
+}
+
 /* ==========================================================================
    8. Footer
    ========================================================================== */
