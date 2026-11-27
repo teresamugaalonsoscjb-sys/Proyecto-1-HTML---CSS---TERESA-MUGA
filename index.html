@@ -47,9 +47,9 @@
       <section class="hero">
         <div class="container hero-content">
         
-          <h1>¿Quién soy yo?</h1>
+          <h1>¿QUIÉN SOY YO?</h1>
           <p class="hero-subtitle">
-            Como observarán en mi CV, soy una persona activa, dinámica, responsable y en continuo proceso de formación en el campo de la Educación. Cuento con capacidad de comunicación con el alumnado, escucha activa y resolución de problemas para favorecer el aprendizaje, así como organización de equipos de trabajo.
+            Como observarán en mi CV, soy una persona activa, dinámica, responsable y en continuo proceso de formación. Cuento con capacidad de comunicación, escucha activa y resolución de problemas para favorecer el aprendizaje, así como organización de equipos de trabajo.
           </p>
        
 
@@ -61,7 +61,7 @@
         <div class="container">
           <h2>EXPERIENCIA LABORAL</h2>
           <p> 
-            Soy educadora en continua formación, actualmente cursando una FP de Desarrollo de Aplicaciones Web (DAW) y el Máster en Ciberseguridad. Cuento con experiencia docente en colegios públicos y concertados de España y en la Alliance Française en Polonia, incluyendo diez años en un colegio concertado de Burgos donde lideré proyectos de medio ambiente, sostenibilidad y ecoinnovación e impulsé un huerto escolar. Anteriormente también trabajé como profesora de equinoterapia y socorrista. Actualmente resido en Varsovia (Polonia), donde trabajo como cooperante internacional en la Cruz Roja al frente del área de voluntarios internacionales, aportando comunicación, escucha activa, organización de equipos y resolución de situaciones en entornos diversos.
+            Soy educadora en continua formación, actualmente cursando una FP de Desarrollo de Aplicaciones Web (DAW) y el Máster en Ciberseguridad. Cuento con experiencia docente en colegios públicos y concertados de España y en la Alliance Française en Polonia, incluyendo diez años en un colegio concertado de Burgos donde lideré proyectos de medio ambiente, sostenibilidad y ecoinnovación e impulsé un huerto escolar. Anteriormente, también trabajé como profesora de equinoterapia y socorrista. Actualmente resido en Varsovia (Polonia), donde trabajo como cooperante internacional en la Cruz Roja al frente del área de voluntarios internacionales, aportando comunicación, escucha activa, organización de equipos y resolución de situaciones en entornos diversos.
           </p>
             <h3>EXPERIENCIA LABORAL:</h3>
           <ul class="list">
@@ -142,7 +142,7 @@
       </p>
       <p><strong>Documentación:</strong> Memoria descriptiva</p>
       <a
-        href="docs/sello-sostenible-programa-educativo.pdf"
+        href="Proyectos\SCJ.MEMORIA DESCRIPTIVA CON RESULTADOS.pdf"
         class="btn btn-secondary"
         target="_blank"
         rel="noopener noreferrer"
@@ -160,12 +160,14 @@
       </p>
       <p><strong>Enfoque:</strong> Innovación sostenible y gestión de proyecto</p>
        <a
-        href="docs/vida-saludable-programa-educativo.pdf"
+        href="Audios/Stem y huerto 5°EP.m4a"
+        href="Audios/Stem y huerto 1°ESO.m4a"
         class="btn btn-secondary"
         target="_blank"
         rel="noopener noreferrer"
       >
-        Escuchar
+        Escucha
+      </a>
     </article>
 
     <article class="project-card">
@@ -177,7 +179,7 @@
       </p>
       <p><strong>Documentación:</strong> Programa educativo</p>
       <a
-        href="docs/vida-saludable-programa-educativo.pdf"
+        href="Proyectos\Memoria labrando vida con el corazón .pdf"
         class="btn btn-secondary"
         target="_blank"
         rel="noopener noreferrer"
@@ -189,9 +191,8 @@
     <article class="project-card">
     <h3>Mapa interactivo de Polonia</h3>
       <p>
-        Proyecto web desarrollado para visualizar de forma clara e interactiva información geográfica y territorial en la Cruz Roja de Polonia, facilitando la consulta de datos de manera intuitiva y accesible.
+      Proyecto web desarrollado para visualizar de forma clara e interactiva información geográfica y territorial en la Cruz Roja de Polonia, facilitando la consulta de datos de manera intuitiva y accesible.
       </p>
-      
      <a
   href="https://github.com/teresamugaalonsoscjb-sys/Mapa-Polonia.git"
   class="btn btn-primary"
@@ -210,57 +211,77 @@
         <div class="container">
           
           <h2>CONTACTO</h2>
+
+        
           <form
             id="contact-form"
             class="contact-form"
             action="https://formspree.io/f/teresamugaalonsoscjb@gmail.com"
             method="POST"
           >
-          
-          <input
-              type="hidden"
-              name="_replyto"
-              value=""
-            />
 
-            <div class="form-group">
-              <label for="nombre">Nombre</label>
-              <input
-                type="text"
-                id="nombre"
-                name="nombre"
-                placeholder="Tu nombre"
-                required
-              />
-            </div>
+          <input type="hidden" name="_replyto" value="" />
 
-            <div class="form-group">
-              <label for="email">Correo electrónico</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="tu@correo.com"
-                required
-              />
-            </div>
+            <fieldset>
+                    <legend>Datos de contacto</legend>
+                    <p>
+                        <label for="nombre"> Nombre (obligatorio):</label>
 
-            <div class="form-group">
-              <label for="mensaje">Mensaje</label>
-              <textarea
-                id="mensaje"
-                name="mensaje"
-                rows="4"
-                placeholder="Escribe tu mensaje..."
-                required
-              ></textarea>
-            </div>
+                        <input
+                            type="text"
+                            id="nombre"
+                            name="nombre"
+                            autocomplete="name"
+                            required
+                            minlength="2">
+                    </p>
 
-            <button type="submit" class="btn btn-primary">Enviar mensaje</button>
-          <p 
-          id="form-status" class="form-status" role="status" aria-live="polite">
-          </p>
-          </form>
+                    <p>
+                      <label for="correo"> Correo electrónico (obligatorio):</label>
+
+                        <input
+                            type="email"
+                            id="correo"
+                            name="correo"
+                            autocomplete="email"
+                            required>
+                    </p>
+                </fieldset>
+
+                 <fieldset>
+                    <legend> Tu consulta</legend>
+
+                <p>
+                 <div class="form-group form-group--inline">
+                    <label for="motivo">Motivo</label>
+                        <select id="motivo" name="motivo" required>
+                              <option value="" disabled selected>Selecciona un motivo</option>
+                              <option value="Disponibilidades">Disponibilidad</option>
+                              <option value="Proyectos">Proyectos</option>
+                              <option value="Otros">Otros</option>
+                            </select>
+                    </div>
+                </p>
+                   
+                   
+                 <p>
+                        <label for="mensaje">Mensaje (obligatorio) </label>
+                        <textarea
+                            id="mensaje"
+                            name="mensaje"
+                            rows="5"
+                            cols="40"
+                            required
+                            minlength="10"
+                            aria-describedby="ayuda-mensaje">
+                        </textarea>
+                    </p>
+                </fieldset>
+
+                <button type="submit">Enviar</button>
+               <button type="reset">Restablecer campos</button>
+
+            </form>
         </div>
       </section>
     </main>
@@ -278,6 +299,11 @@
           </li>
         </ul>
       </div>
+      <p>
+            <a href="#inicio">
+                Volver al inicio
+            </a>
+        </p>
     </footer>
 
 <script>
